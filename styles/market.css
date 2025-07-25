@@ -62,7 +62,7 @@ body {
     font-family: "Inter", sans-serif;
     color: rgba(0, 0, 0, 0.5);
     margin: 0;
-    padding: 0;
+    padding: 30 0 0 0;
   }
   
   /* nav css */
@@ -71,12 +71,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
   }
 
   .container{
     max-width: 1140px;
     margin: 0 auto;
-    padding: 20px;
   }
 
   nav ul{
@@ -121,8 +121,14 @@ body {
     font-weight: 700;
     margin-bottom: 0;
 }
+.bannar-content p{
+    padding: 10px 20px 0px 0px;
+}
 
 /* Our Plants section */
+
+main, footer, .bannar{ padding: 20px;}
+
 
 .our-plants{
     text-align: center;
@@ -194,37 +200,57 @@ right: -90px;
     margin-top: 20px;
 }
 
-/* footer section css */
 
-.footer-content{
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
+/* Deal section css */
+.deals-section{
+    margin-top: 60px;
 }
-
-.footer-content-1 p{
-    margin-top: 20px;
-}
-.footer-content-2 a, .footer-content-3 a{
-    color: rgba(0, 0, 0, 0.5);
-}
-.footer-content-2 a, .footer-content-3 a{
-    display: block;
+.deals-header h2, .deals-header p {text-align:  center;}
+.deals-cards {
     margin-top: 30px;
-    font-family: "Inter", sans-serif;
-}
-
-.footer-content-4{
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    align-items: center;
-    
+    gap: 30px;
 }
+.left-deals{ 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.right-deals{ }
 
+.deal-card{
+    position: relative;
+}
+.deal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.deal-card img{
+    border-radius: 10px;
+    width: 100%;
+}
+.deal-content h3, .deal-content a{
+    color: white;
+}
+.deal-content a { 
+    text-decoration: underline;
+}
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 10px;
+    height: 99%;
+}
 
 /* Form css */
 .form{
@@ -262,6 +288,37 @@ right: -90px;
     box-sizing: border-box;
 }
 
+
+/* footer section css */
+
+.footer-content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content-1 p{
+    margin-top: 20px;
+}
+.footer-content-2 a, .footer-content-3 a{
+    color: rgba(0, 0, 0, 0.5);
+}
+.footer-content-2 a, .footer-content-3 a{
+    display: block;
+    margin-top: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+.footer-content-4{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    
+}
 
 /* Responsive */
 @media screen and (max-width: 576px) {
@@ -301,6 +358,7 @@ right: -90px;
         display: none;
       }
     
+      .our-plants{margin-top: 20px;}
       .bannar {
         flex-direction: column-reverse;
         margin-top: 20px;
@@ -340,6 +398,17 @@ right: -90px;
       .planet-right-col ul { margin-left: 0px; padding-left: 20px;}
 
 
+     /* deals css responsive */
+
+     .deals-section{ margin-top: 10px;}
+      .deals-cards{
+        flex-direction: column;
+      }
+      .overlay{height: 100%;}
+      .deals-header p {margin-top: 10px;}
+
+
+
       /* form css responsive */
     
       .form {
@@ -356,13 +425,14 @@ right: -90px;
         width: 100%;
     }
     .form-btn button{
-        padding: 50px 0px;
+        padding: 17px 10px !important;
     }
 
 
       /* footer css responsive */
       .footer-content{
         flex-direction: column;
+        margin-top: 10px;
     }
     .footer-content-4 { margin-top: 30px; }
 }
