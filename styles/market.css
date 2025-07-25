@@ -15,7 +15,10 @@
     font-weight: normal;
     font-style: normal;
   }
-
+a {
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+}
 /* Reset some default */
 body {
     margin: 0;
@@ -51,6 +54,7 @@ body {
         font-size: 16px;
         font-weight: 600;
         border: none;
+        font-family: "Inter", sans-serif;
   }
   /* Paragraph */
   p {
@@ -158,6 +162,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 30px 100px;
+    font-family: "Inter", sans-serif;
 }
 .flower-planet-col{
     max-width: 50%;
@@ -189,6 +194,36 @@ right: -90px;
     margin-top: 20px;
 }
 
+/* footer section css */
+
+.footer-content{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content-1 p{
+    margin-top: 20px;
+}
+.footer-content-2 a, .footer-content-3 a{
+    color: rgba(0, 0, 0, 0.5);
+}
+.footer-content-2 a, .footer-content-3 a{
+    display: block;
+    margin-top: 30px;
+    font-family: "Inter", sans-serif;
+}
+
+.footer-content-4{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    
+}
 /* Responsive */
 @media screen and (max-width: 576px) {
 
@@ -264,4 +299,11 @@ right: -90px;
         margin-top: 20px;
       }
       .planet-right-col ul { margin-left: 0px; padding-left: 20px;}
+
+
+      /* footer css responsive */
+      .footer-content{
+        flex-direction: column;
+    }
+    .footer-content-4 { margin-top: 30px; }
 }
