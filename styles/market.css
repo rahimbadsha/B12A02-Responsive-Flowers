@@ -180,15 +180,22 @@ main, footer, .bannar{ padding: 20px;}
     width: 100%;
 }
 
+
 .flower-badge img{
 position: absolute;
 top: -140px;
 right: -90px;
-}
 
-.planet-right-col h2{
-
+animation: spin 10s linear infinite;
 }
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 .planet-right-col ul {
     margin-left: 10px;
