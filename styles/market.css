@@ -19,7 +19,7 @@
 /* Reset some default */
 body {
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
     background-color: #F5F8FF;
     box-sizing: content-box;
   }
@@ -40,12 +40,18 @@ body {
     font-size: 50px;
   }
   
+  span {
+    color: #E95A08;
+  }
+
   /* Paragraph */
   p, ul li a {
     font-size: 22px;
     line-height: 1.5;
     font-family: "Inter", sans-serif;
     color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
   }
   
   /* nav css */
@@ -85,3 +91,59 @@ body {
   ul li:last-child a{
     color: #000000;
   }
+
+  /* banner css */
+
+.bannar{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bannar-content h1{
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      h1, h2, h3, h4, h5, h6{
+        font-size: 24px !important;
+        line-height: 34px !important;
+      }
+      p{ 
+        font-size: 14px !important;
+        line-height: 24px !important;
+      }
+    
+      nav ul {
+        justify-content: space-between;
+        padding: 0 !important;
+        margin: 0;
+      }
+      nav ul li a{ font-size: 18px;}
+    
+      nav ul li:not(:last-child) {
+        display: none;
+      }
+    
+      .bannar {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+        width: 100%; 
+      }
+    
+      .bannar-content h1{
+        margin-top: 20px;
+      }
+ 
+}
