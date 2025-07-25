@@ -22,7 +22,6 @@ a {
 /* Reset some default */
 body {
     margin: 0;
-    padding: 0 20px;
     background-color: #F5F8FF;
     box-sizing: content-box;
   }
@@ -77,6 +76,7 @@ body {
   .container{
     max-width: 1140px;
     margin: 0 auto;
+    padding: 20px;
   }
 
   nav ul{
@@ -224,6 +224,45 @@ right: -90px;
     align-items: center;
     
 }
+
+
+/* Form css */
+.form{
+    margin-top: 120px;
+    background-image: url(/assets/news-letter-bg.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 150px 150px;
+}
+
+.form-width{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.cta-form{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.form-input-field {
+    width: 70%;
+}
+.form-btn{
+    width: 30%;
+}
+.form h2{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cta-form input{
+    border: none;
+    padding: 22px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
 /* Responsive */
 @media screen and (max-width: 576px) {
 
@@ -299,6 +338,26 @@ right: -90px;
         margin-top: 20px;
       }
       .planet-right-col ul { margin-left: 0px; padding-left: 20px;}
+
+
+      /* form css responsive */
+    
+      .form {
+        padding: 100px 20px;
+        box-sizing: border-box;
+      }
+    .cta-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .form-input-field{
+        width: 100%;
+    }
+    .form-btn button{
+        padding: 50px 0px;
+    }
 
 
       /* footer css responsive */
